@@ -56,3 +56,20 @@ ostream & operator<<(ostream & os, const engine_ & obj)
 	os << obj.getInfo();
 	return os;
 }
+
+istream & operator>>(istream & is, engine_ & obj)
+{
+	double isVolume;
+	int isCylinder;
+	string isType;
+	cout << "enter engine volume: ";
+	is >> isVolume;
+	obj.setVolume(isVolume);
+	cout << "enter engine cylinder: ";
+	is >> isCylinder;
+	obj.setCylinder(isCylinder);
+	cout << "enter engine type: ";
+	is >> isType;
+	obj.setType(isType);
+	return is;
+}
