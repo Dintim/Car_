@@ -22,4 +22,5 @@ public:
 };
 
 ostream&operator<<(ostream&os, const engine_&obj);
+istream&operator>>(istream&is, engine_&obj);
 
