@@ -114,7 +114,66 @@ ostream & operator<<(ostream & os, const car_ & obj)
 	return os;
 }
 
-//istream & operator>>(istream & is, car_ & obj)
-//{
-//	
-//}
+istream & operator>>(istream & is, car_ & obj)
+{
+	double engVolume;
+	int engCylinder;
+	string engType;
+	cout << "enter engine volume: ";
+	is >> engVolume;
+	cout << "enter engine cylinder: ";
+	is >> engCylinder;
+	cout << "enter engine type: ";	
+	is >> engType;
+	engine_ isEngine(engVolume, engCylinder, engType);
+	obj.setEngine(isEngine);
+	
+	double wheelDiametr;
+	string wheelType;
+	cout << "enter wheel diameter: ";
+	is >> wheelDiametr;
+	cout << "enter wheel type: ";
+	is >> wheelType;
+	wheel_ isWheel(wheelDiametr, wheelType);
+	for (int i = 0; i < 4; i++) {
+		obj.setWheel(isWheel, i);
+	}
+
+	string model;
+	cout << "enter model: ";	
+	is >> model;
+	obj.setModel(model);
+	
+	int index;
+	cout << "enter color code (1-WHITE, 2-BLACK, 3-RED, 4-GREEN): ";
+	is >> index;
+	switch (index) {
+	case 1: 
+	{
+		obj.setColor(colors::WHITE);
+	}
+		break;
+	case 2:
+	{
+		obj.setColor(colors::BLACK);
+	}
+		break;
+	case 3:
+	{
+		obj.setColor(colors::RED);
+	}
+		break;
+	case 4:
+	{
+		obj.setColor(colors::GREEN);
+	}
+		break;
+	}
+
+	int isYear;
+	cout << "enter car's year: ";
+	is >> isYear;
+	obj.setYear(isYear);
+
+	return is;
+}
