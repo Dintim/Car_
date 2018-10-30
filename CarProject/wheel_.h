@@ -16,4 +16,5 @@ public:
 };
 
 ostream&operator<<(ostream&os, const wheel_&obj);
+istream&operator>>(istream&is, wheel_&obj);
 
