@@ -33,5 +33,5 @@ public:
 };
 
 ostream&operator<<(ostream&os, const car_&obj);
-//istream&operator>>(istream&is, car_&obj);
+istream&operator>>(istream&is, car_&obj);
 
