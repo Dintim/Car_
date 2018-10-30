@@ -3,10 +3,8 @@
 
 void main()
 {
-	car_ c;
-	c.setColor(colors::RED);
-	cout << c;
-	c.getEngine().setVolume(1.5);
+	car_ c;	
+	cin >> c;
 	cout << c;
 	system("pause");
 }
