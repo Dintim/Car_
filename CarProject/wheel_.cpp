@@ -41,3 +41,16 @@ ostream & operator<<(ostream & os, const wheel_ & obj)
 	os << obj.getInfo();
 	return os;
 }
+
+istream & operator>>(istream & is, wheel_ & obj)
+{
+	double isDiametr;
+	string isType;
+	cout << "enter wheel diametr: ";
+	is >> isDiametr;
+	obj.setDiametr(isDiametr);
+	cout << "enter wheel type: ";
+	is >> isType;
+	obj.setType(isType);
+	return is;
+}
